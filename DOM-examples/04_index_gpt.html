@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing DOM tree</title>
+</head>
+
+<body>
+    <div id="parent">
+        <p>child 1</p>
+        <p>child 2</p>
+        <p>child 3</p>
+    </div>
+</body>
+
+<script>
+    const parent = document.getElementById("parent");
+
+    const firstChild = parent.firstElementChild;
+    const secondChild = parent.lastElementChild;
+
+    console.log(firstChild.textContent);  // Output: child 1
+    console.log(secondChild.textContent); // Output: child 3
+
+
+    // Navigating sibling elements
+
+    // Select the second <p> element using CSS selector :nth-child(2)
+    const middle = document.querySelector('p:nth-child(2)');
+
+    // Access the node before the middle <p> element (may include text nodes)
+    const first = middle.previousSibling;  // middle's one previous sibling
+
+    // Access the node after the middle <p> element (may include text nodes)
+    const third = middle.nextSibling; // middle's one next sibling 
+
+    // Access the first child node inside the middle <p> element (should be the text node "child 2")
+    const middles_firstChild = middle.firstChild;
+
+    // Access the last child node inside the middle <p> element (should be the same text node "child 2")
+    const middles_lastChild = middle.lastChild;
+</script>
+
+</html>

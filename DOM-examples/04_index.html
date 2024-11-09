@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing DOM tree</title>
+</head>
+<body>
+    <div id="parent">
+        <p>child 1</p>
+        <p>child 2</p>
+    </div>
+</body>
+
+<script>
+    const parent = document.getElementById("parent");
+
+    const firstChild = parent.firstChild;
+    const secondChild = parent.lastChild;
+
+    // console.log(firstChild)
+    // console.log(secondChild)
+
+    // to view the actual text written
+    console.log(firstChild.textContent)
+    console.log(secondChild.textContent)
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p class="myClass">Paragraph 1</p>
+        <p class="myClass">Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+</body>
+
+<script>
+    
+    const container = document.getElementById("container");
+
+    
+    const single_select = container.querySelector(".myClass");
+
+    
+    const multiple_select = container.querySelectorAll(".myClass");
+
+    console.log(single_select); // Logs the first <p> element with class "myClass" (Paragraph 1)
+    console.log(multiple_select); // Logs a NodeList of all <p> elements with class "myClass"
+    console.log(multiple_select[0]); // Logs the first element in the NodeList (Paragraph 1)
+</script>
+</html>

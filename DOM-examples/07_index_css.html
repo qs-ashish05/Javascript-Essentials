@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv" class="active"> 
+        This is div content
+    </div>
+
+    <button id="toggleBtn">Toggle class</button>
+</body>
+
+<script>
+    const div = document.getElementById("mydiv");
+    const btn = document.getElementById("toggleBtn");
+
+    function toggleBackground() {
+        console.log(`current class is ${div.classList}`);
+        
+        div.classList.toggle("active");
+        div.classList.toggle("inactive");
+
+        // Set background color based on the current class
+        if (div.classList.contains("active")) {
+            div.style.backgroundColor = "green";
+        } else {
+            div.style.backgroundColor = "red";
+        }
+    }
+
+    // Add event listener to toggle background color when the button is clicked
+    btn.addEventListener('click', toggleBackground);
+</script>
+</html>

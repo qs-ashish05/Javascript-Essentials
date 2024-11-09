@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child object creation</title>
+
+    <style>
+        #img-id {
+            width: 200px; 
+            height: auto; 
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="mylist">
+        <li>Item - 01</li>
+        <li>Item - 02</li>
+    </ul>
+
+    <div>
+        <img id="img-id" src="./static/moon.jpg" alt="Moon image is there">
+    </div>
+</body>
+
+<script>
+    const list = document.getElementById("mylist");
+    const new_list = document.createElement('li');
+    new_list.textContent = 'This is item by code';
+    //document.append(new_list)
+    list.appendChild(new_list);
+
+
+    // change the content of image using code 
+    const image = document.getElementById('img-id');
+    // image.setAttribute('src', './static/buildings.jpg');  // if we uncomment this will see output 
+
+
+    
+
+</script>
+</html>
