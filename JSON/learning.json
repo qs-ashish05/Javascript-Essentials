@@ -1,0 +1,14 @@
+// used for data interchange between 
+//     server and web or different spftware system parts 
+//     common commmunication language 
+//     eg. all API responses are in JSON format only 
+
+
+json is widely used for object serializations and decerailizations over the network 
+
+json is not tied to any programming language it can be used with any language 
+
+json is simpler than XML
+
+json is versitile 
+

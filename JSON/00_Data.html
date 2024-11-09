@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function FetchBooks() {
+        fetch("./00_Data.json").then(response => response.json())
+        .then (data => {
+            console.log("All json data is");
+            data.forEach(book => {
+                console.log(book.title);
+                console.log(book.author);
+                console.log(book.publicationYear);
+            });
+        })
+        .catch(error => {
+            console.error("Error while fetching the data", error);
+        })
+    }
+
+    FetchBooks();
+</script>
+</html>
